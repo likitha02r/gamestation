@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> {% block title %} Connect with us {% endblock %}</title>
+  <link rel="stylesheet" href="static/styles.css">
+    <style>
+
+/* Main Styles */
+main {
+    padding: 40px;
+    text-align: center;
+    background-color: #000;
+    margin: 40px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+main p {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #ff9800;
+    box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
+}
+
+form button {
+    background-color: #650000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #e08900;
+}
+
+
+
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img class="img"src="https://img.icons8.com/?size=100&id=0FvHf0Nf8v0t&format=png&color=000000">
+      <div class="logo"> Game$tation</div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/collections">Collections</a></li>
+        <li><a href="/about">About Us</a></li>
+      </ul>
+    </nav>
+    <a href="/login" class="get-started">Log in</a>
+  </header>
+
+<main>
+        <h1>Connect With Us</h1>
+        <p>Have questions or feedback? We'd love to hear from you!</p>
+
+        <form action="/connect" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </main>
+
+
+
+</body>
+</html>
+

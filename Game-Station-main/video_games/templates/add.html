@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Game{% endblock %}
+
+{% block content %}
+<form action="/add" enctype="multipart/form-data" method="POST">
+    <input type="file" name="image" placeholder="Game Image" required>
+    <input type="text" name="title" placeholder="Game Title" required>
+    <input type="number" name="release" placeholder="Release Year" required>
+    <input type="text" name="team" placeholder="Team" required> <br> <br>
+    <input type="text" name="rating" placeholder="Rating" required>
+    <input type="text" name="listed" placeholder="Times listed" required>
+    <input type="text" name="no_reviews" placeholder="No. of reviews" required> <br> <br>
+    <input type="text" name="genres" placeholder="Genres" required>
+    <input type="text" name="summary" placeholder="Summary" required>
+    <input type="text" name="reviews" placeholder="Reviews" required> <br> <br>
+    <input type="text" name="place" placeholder="Plays" required>
+    <input type="text" name="playing" placeholder="Playing" required>
+    <input type="text" name="backlogs" placeholder="Backlogs" required>  <br> <br>
+    <input type="text" name="wishlist" placeholder="Wishlist" required>
+   <a href="/collections"><button type="submit">Add Game</button></a>
+</form>
+{% endblock %}
